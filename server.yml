@@ -2,7 +2,7 @@
 - hosts: all
   become: yes
   tasks: 
-  - name: install webserver on ubuntu16
+  - name: install wer on ubuntu16
     apt: 
       name: apache2
       state: present
