@@ -2,7 +2,7 @@
 - hosts: all
   become: yes
   tasks: 
-  - name: install wbserver on ubuntu16
+  - name: install webserver on ubuntu16
     apt: 
       name: apache2
       state: present
@@ -19,9 +19,9 @@
     yum:
       name: httpd
       state: present
-    when: ansible_os_family =="redhat"
+    when: ansible_os_family =="RedHat"
   - name: start webserver on redhat8
     service:
       name: redhat8
       state: started
-    when: ansible_os_family =="redhat"
+    when: ansible_os_family =="RedHat"
