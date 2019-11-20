@@ -1,0 +1,5 @@
+---
+  - name: crete file
+    file: 
+     path: /home/hari/file.txt
+     state: touch
