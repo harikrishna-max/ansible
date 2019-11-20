@@ -17,3 +17,6 @@
     template:
       src: index.j2
       dest: /var/www/html/index.html
+  - name: debug
+    debug:
+     msg: success    
