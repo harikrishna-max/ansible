@@ -14,10 +14,9 @@
       name: install git
       state: present
     when: myresult.stderr ==""
-
   - name: install tree
     apt:
-      name: install tree
+      name: install tree 
       state: present
-    when: myresult.stderr =="" 
+    when: myresult.stderr !="" 
 
