@@ -2,9 +2,9 @@
 - host: webservers
   become: yes
   tasks: 
-  - name:  istall webserver on redhat 
+  - name:  install webserver on redhat 
     yum:
     - name: httpd
       state: present
-    notify: restart webservers
+    notify: restartwebservers
     when: ansible_os_family =="RedHat" 
