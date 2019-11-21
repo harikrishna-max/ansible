@@ -7,17 +7,17 @@
     register: myresult
   - name:  display the above task result
     debug:
-    msg: "{{myresult}}"
+      msg: "{{myresult}}"
 
   - name: install git
     apt: 
       name: install git
       state: present
-    when: myresult.stderr ==""
+      when: myresult.stderr ==""
 
   - name: install tree
     apt:
       name: install tree
       state: present
-    when: myresult.stderr =="" 
+      when: myresult.stderr =="" 
 
