@@ -5,7 +5,7 @@
   - name: install git
     apt: 
       name: git
-  - action: skip
+    when: result is skipped
 
   - name: install wget
     apt: 
