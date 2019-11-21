@@ -6,13 +6,16 @@
     apt:
      name: tree   
      state: present
-    when: result is skipped
+     tags: kds
+    
   - name: install git
     apt:
       name: git
       state: present
+      tags: kds
 
   - name: install wget
     apt:
      name: wget
      state: present
+     tags: hari
