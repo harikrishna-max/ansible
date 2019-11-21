@@ -5,5 +5,14 @@
   - name: install tree
     apt:
      name: tree   
-    state: present
-   
+     state: present
+    when: result is skipped
+  - name: install git
+    apt:
+      name: git
+      state: present
+
+  - name: install wget
+    apt:
+     name: wget
+     state: present
