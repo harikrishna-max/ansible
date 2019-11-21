@@ -8,3 +8,10 @@
       state: present
     notify: restartwebserver
     when: ansible_os_family =="RedHat"
+
+  - name: index.j2 to webservers
+    template:
+      src: index.j2
+      dest: /var/www/html/index.html
+    notify: restartwebserver
+    when: ansible_os_family =="RedHat"
