@@ -1,10 +1,10 @@
 ---
-- host: webservers
+- hosts: webservers
   become: yes
-  tasks: 
-  - name:  install webserver on redhat 
+  tasks:
+  - name: install webservers on redhat
     yum:
-    - name: httpd
+      name: httpd
       state: present
-    notify: restartwebservers
-    when: ansible_os_family =="RedHat" 
+    notify: restartwebserver
+    when: ansible_os_family =="RedHat"
