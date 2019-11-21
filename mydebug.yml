@@ -17,8 +17,7 @@
 
   - name: install tree
     apt:
-     name: install tree
-     state: present
+      name: install tree
+      state: present
     when: myresult.stderr =="" 
 
-    
