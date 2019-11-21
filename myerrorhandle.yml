@@ -5,8 +5,8 @@
   - name: install git
     apt: 
       name: git
-
-  - name: install get
+    action: skip
+  - name: install wget
     apt: 
       name: wget
     igore_errors: yes
