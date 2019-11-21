@@ -1,23 +1,22 @@
 ---
 - hosts: 172.31.21.35
-  become: yes 
-  tasks:  
-  - name: linux command
-    command: hostname -f
+  become: yes
+  tasks: 
+  - name: execute linux command
+    command: hostname -f 
     register: myresult
-  - name:  display the above task result
+  - name: display the above task result
     debug:
       msg: "{{myresult}}"
 
   - name: install git
     apt: 
-      name: install git
+      name: git
       state: present
     when: myresult.stderr ==""
-    
+
   - name: install tree
     apt:
-      name: install tree 
+      name: tree
       state: present
-    when: myresult.stderr !="" 
-
+    when: myresult.stderr !=""
