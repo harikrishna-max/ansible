@@ -1,0 +1,16 @@
+---
+- hosts: 172.31.21.35
+  become: yes
+  tasks: 
+  - name: install git
+    apt: 
+      name: git
+
+  - name: install get
+    apt: 
+      name: wget
+    igore_errors: yes
+
+  - name: install tree
+    apt:
+      name: tree
