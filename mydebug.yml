@@ -3,17 +3,17 @@
   become: yes 
   tasks:  
   - name: linux command
-   command: hostname -f
-   register: myresult
- - name:  display the above task result
-   debug:
+    command: hostname -f
+    register: myresult
+  - name:  display the above task result
+    debug:
     msg: "{{myresult}}"
 
- - name: install git
-   apt: 
-    name: install git
-    state: present
-   when: myresult.stderr ==""
+  - name: install git
+    apt: 
+      name: install git
+      state: present
+    when: myresult.stderr ==""
 
   - name: install tree
     apt:
