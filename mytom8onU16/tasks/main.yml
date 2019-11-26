@@ -1,7 +1,7 @@
 ---
 # tasks file for mytom8onU16
 - include_tasks: myjavainstall.yml
-- include_tasks: myUsergroup.yml
+- include_tasks: myusergroup.yml
 - include_tasks: download.yml
 - include_tasks: extract.yml
 - include_tasks: Permissions.yml
