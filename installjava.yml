@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: install java on ubuntu 16 nodes
+    apt:
+     name: "{{javaonubuntu}}"
+     state: "{{installjava}}"
+    when: ansible_os_family =="debian"
+
